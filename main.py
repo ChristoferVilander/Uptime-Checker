@@ -37,7 +37,8 @@ class UptimeChecker:
 
             # Calculate the percentage uptime and print it to the log file
             percentage = (self.up_time / self.total_pings) * 100
-            print(f'The uptime for {self.url} is {percentage:.2f}%', file=self.file_handle)
+            print(f'{time.strftime("%Y-%m-%d %H:%M:%S")} - Uptime: {percentage:.2f}%', file=self.file_handle)
+
 
 
 if __name__ == "__main__":
